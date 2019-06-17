@@ -6,7 +6,9 @@
 using namespace std;
 
 int main(){
+	string repeat;
 	int n = 0;
+	Repeat:
 	cout<<"Please enter number of points: "<<endl;
 	cin>>n;
 	double x =0;
@@ -53,9 +55,13 @@ int main(){
 		
 		result += (ys[r]/denomresult[r]) * nomresult[r];
 	}
-	
+	cout<<"\n\n"<<endl;
 	cout<<"The y("<<x<<")"<<" is equal to "<<result<<endl;
-	
+	cout<<"\n\n"<<endl;
+	cout<<"-----------------------------------------------------------------------"<<endl;
+	cout<<"\n"<<endl;
+	cout<<"Do you want to solve another problem? (Enter yes or y to repeat)"<<endl;
+	cin>>repeat;
+	if(repeat == "yes" || repeat == "y") goto Repeat;
+	else exit(0);	
 }
-	
-	
