@@ -1,4 +1,4 @@
-//This code is written by Mustafa Hesham Mohamed to find the root of a function using fixed point iteration method.
+//This code is written by Mustafa Hesham Mohamed.
 #include <iostream>
 #include <sstream>
 #include <cmath>
