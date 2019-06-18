@@ -1,4 +1,5 @@
 //This code is written by Mustafa Hesham Mohamed.
+//My student code at FSSR is 201800378.
 #include <iostream>
 #include <sstream>
 #include <cmath>
@@ -7,8 +8,9 @@ using namespace std;
 
 int main(){
 	string repeat;
+	string newproblem;
+	newproblem:
 	int n = 0;
-	Repeat:
 	cout<<"Please enter number of points: "<<endl;
 	cin>>n;
 	double x =0;
@@ -25,14 +27,15 @@ int main(){
 		cout<<"Please enter y["<<i<<"]: "<<endl;
 		cin>>ys[i];
 	}
-	
+	Repeat:
 	cout <<"Please enter the value to interpolate: "<<endl;
+	x = 0;
+	result = 0;
 	cin>>x;
 	for (int f=0; f<n; f++){
 		denom =1;
 	for (int d=0; d<n; d++){
 		if (f == d) continue;
-		
 		else{
 		denom *= xs[f] - xs[d];
 		denomresult[f] = denom;	
@@ -60,8 +63,13 @@ int main(){
 	cout<<"\n\n"<<endl;
 	cout<<"-----------------------------------------------------------------------"<<endl;
 	cout<<"\n"<<endl;
-	cout<<"Do you want to solve another problem? (Enter yes or y to repeat)"<<endl;
+	cout<<"Do you want to solve for another point? (Enter yes or y to repeat)"<<endl;
 	cin>>repeat;
 	if(repeat == "yes" || repeat == "y") goto Repeat;
-	else exit(0);	
+	else {
+		cout<<"Do you want to solve another new problem? (Enter yes or y to repeat)"<<endl;
+		cin>>newproblem;
+		if (newproblem == "yes" || newproblem == "y") goto newproblem;
+		else exit(0);
+	}	
 }
